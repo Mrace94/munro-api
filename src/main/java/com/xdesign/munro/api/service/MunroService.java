@@ -37,7 +37,6 @@ public class MunroService {
                                     Integer maxHeight ) throws ValidationException {
         log.info( "Fetching munros from the database" );
 
-
         if ( minHeight > maxHeight ) {
             throw new ValidationException( "Minimum height can't be greater than max height" );
         }
