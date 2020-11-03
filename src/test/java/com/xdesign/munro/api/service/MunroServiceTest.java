@@ -58,7 +58,7 @@ public class MunroServiceTest {
         assertEquals( 1, result.getTotalElements() );
         assertEquals( "Test", munroResult.getName() );
         assertEquals( 1000, munroResult.getHeight().intValue() );
-        assertEquals( "MUN", munroResult.getPost1997() );
+        assertEquals( "MUN", munroResult.getCategory() );
         assertEquals( "XXXXXX", munroResult.getGridRef() );
     }
 

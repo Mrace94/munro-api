@@ -26,9 +26,8 @@ public class Munro {
     @Column( name = "height_m" )
     private Integer height;
 
-    @JsonProperty( "category" )
     @Column( name = "post_1997" )
-    private String post1997;
+    private String category;
 
     @Column( name = "grid_ref" )
     private String gridRef;

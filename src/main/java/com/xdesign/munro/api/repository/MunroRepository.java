@@ -11,7 +11,8 @@ import org.springframework.stereotype.Repository;
 public interface MunroRepository extends JpaRepository<Munro, String> {
 
     @Query( "SELECT m FROM Munro m " +
-            "WHERE (:category IS NULL OR :category = 'EITHER' OR m.post1997 = :category) " +
+            "WHERE m.category IS NOT NULL " +
+            "AND (:category IS NULL OR :category = 'EITHER' OR m.category = :category) " +
             "AND (:minHeight IS NULL OR m.height >= :minHeight)" +
             "AND (:maxHeight IS NULL OR m.height <= :maxHeight )" )
     Page<Munro> findAllByCategoryMinAndMaxHeight( Pageable pageable,
